@@ -66,14 +66,14 @@ class GetLineTest {
 	
 	
 	@Test()
-    @DisplayName("V4. Devuelve la línea.")
+    @DisplayName("V4. Devuelve la línea. También vale si la línea está vacía (por ejemplo separación entre párrafos")
 	/*
 	 * editor.isEmpty() == false
 	 * linea < 0 == false
 	 * linea > editor.size() == true
 	 * First - 1 - 3 - 4 - 6 - 7 - 8 - Last
 	 */
-    public void getLinea() throws EmptyCollectionException {
+    public void getLineaV4() throws EmptyCollectionException {
 		
         AbstractSingleLinkedListImpl<String> list = new SingleLinkedListImpl<>();
         
@@ -82,5 +82,5 @@ class GetLineTest {
         
         assertEquals(list.toString(), editor.getLinea(1).toString());
     }
-
+	
 }
